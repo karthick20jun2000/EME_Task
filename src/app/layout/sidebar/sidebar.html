@@ -35,12 +35,14 @@
             <a class="sub-item">
                 <li>Grain Receiving</li>
             </a>
-            <a class="sub-item selected" routerLink="truckin" routerLinkActive="active"
+            <a class="sub-item " routerLink="truckin" routerLinkActive="active"
                 [routerLinkActiveOptions]="{exact:true}">
                 <li>Truck In</li>
             </a>
-            <a class="sub-item" routerLink="offloading" routerLinkActive="active">Offloading</a>
-            <a class="sub-item" routerLink="purchase" routerLinkActive="active">Purchase Pricing</a>
+            <a class="sub-item" routerLink="offloading" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}">Offloading</a>
+            <a class="sub-item" routerLink="purchase" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}">Purchase Pricing</a>
             <a class="sub-item">Receiving List</a>
         </div>
 

@@ -59,7 +59,7 @@
 }
 
 .nav-item.active,
-.sub-item.selected {
+.sub-item.active {
   background: #0962b7;
 }
 
