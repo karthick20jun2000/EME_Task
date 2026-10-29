@@ -1,4 +1,3 @@
-
 :host {
   display: block;
   width: 100%;
@@ -11,6 +10,9 @@
   box-sizing: border-box;
 }
 
+.light-white-gray {
+  background-color: #f8f5f524 !important;
+}
 /* Main Page */
 
 .purchase-pricing-page {
@@ -82,7 +84,7 @@
   margin-bottom: 8px;
 }
 
-.purchase-top-info > [class*="col-"] {
+.purchase-top-info > [class*='col-'] {
   min-width: 0;
 }
 
@@ -178,7 +180,7 @@
   align-items: stretch;
 }
 
-.purchase-main-layout > [class*="col-"] {
+.purchase-main-layout > [class*='col-'] {
   min-width: 0;
 }
 
@@ -711,8 +713,8 @@
     font-size: 23px;
   }
 
-  .purchase-top-info > [class*="col-"],
-  .purchase-main-layout > [class*="col-"] {
+  .purchase-top-info > [class*='col-'],
+  .purchase-main-layout > [class*='col-'] {
     width: 100%;
     max-width: 100%;
   }
