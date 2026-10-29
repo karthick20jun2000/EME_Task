@@ -69,10 +69,22 @@
   }
 }
 
-@media (max-width: 700px) {
-  .page-content {
-    padding: 12px;
-  }
+.erp-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-area {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+}
+
+.page-content {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
 }
 
 .erp-layout {
@@ -92,60 +104,6 @@
   min-width: 0;
   padding: 12px;
 }
-
-@media screen and (max-width: 700px) {
-  .page-heading {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .page-heading h1 {
-    font-size: 21px;
-    overflow-wrap: anywhere;
-  }
-
-  .info-banner {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-.erp-layout {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-}
-
-.main-area {
-  flex: 1;
-  min-width: 0;
-  width: 0;
-}
-
-.page-content {
-  width: 100%;
-  min-width: 0;
-  padding: 12px;
-}
-
-@media screen and (max-width: 700px) {
-  .page-heading {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .page-heading h1 {
-    font-size: 17px;
-    overflow-wrap: anywhere;
-  }
-
-  .info-banner {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
 /* Desktop layout */
 .app-layout {
   display: flex;
@@ -168,8 +126,43 @@
   display: none;
 }
 
-/* Mobile layout */
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
+  .page-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page-content {
+    padding: 12px;
+  }
+
+  .page-heading h1 {
+    font-size: 21px;
+    overflow-wrap: anywhere;
+  }
+
+  .info-banner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page-heading h1 {
+    font-size: 17px;
+    overflow-wrap: anywhere;
+  }
+
+  .info-banner {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .app-layout {
     display: block;
   }
@@ -238,10 +231,6 @@
 
 /* offloading */
 
-/* =========================================
-   APPLICATION LAYOUT
-========================================= */
-
 .erp-layout,
 .app-layout {
   display: flex;
@@ -257,9 +246,7 @@
   width: auto;
 }
 
-/* =========================================
-   PAGE CONTENT
-========================================= */
+/* PAGE CONTENT */
 
 .page-content {
   width: 100%;
@@ -270,9 +257,7 @@
   box-sizing: border-box;
 }
 
-/* =========================================
-   PAGE HEADING
-========================================= */
+/* PAGE HEADING */
 
 .page-heading {
   display: flex;
@@ -290,9 +275,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   INFORMATION BANNER
-========================================= */
+/* INFORMATION BANNER */
 
 .info-banner {
   display: flex;
@@ -325,10 +308,6 @@
   font-weight: bold;
 }
 
-/* =========================================
-   MOBILE HEADER CONTROLS
-========================================= */
-
 /* Hidden on desktop */
 
 .mobile-menu-btn {
@@ -342,24 +321,6 @@
 .sidebar-overlay {
   display: none;
 }
-
-/* =========================================
-   DESKTOP FORM LAYOUT
-========================================= */
-
-/*
-Required HTML structure:
-
-<div class="row g-3 main-panels">
-  <div class="col-12 col-xl-5">
-    Receiving Details
-  </div>
-
-  <div class="col-12 col-xl-7">
-    Weight Details
-  </div>
-</div>
-*/
 
 .main-panels {
   align-items: stretch;
@@ -393,9 +354,7 @@ Required HTML structure:
   min-width: 0;
 }
 
-/* =========================================
-   DESKTOP BREAKPOINT
-========================================= */
+/* DESKTOP BREAKPOINT  */
 
 @media screen and (min-width: 1200px) {
   .erp-layout,
@@ -427,12 +386,6 @@ Required HTML structure:
     max-width: 440px;
   }
 
-  /*
-  Bootstrap grid:
-  Receiving Details = 5 columns
-  Weight Details = 7 columns
-  */
-
   .main-panels {
     display: flex;
     flex-direction: row;
@@ -453,11 +406,9 @@ Required HTML structure:
   }
 }
 
-/* =========================================
-   TABLET
-========================================= */
+/* TABLET */
 
-@media screen and (max-width: 1199.98px) {
+@media screen and (max-width: 1110px) {
   .page-heading {
     flex-direction: column;
     align-items: stretch;
@@ -482,9 +433,7 @@ Required HTML structure:
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+/* MOBILE */
 
 @media screen and (max-width: 700px) {
   .erp-layout,
@@ -591,9 +540,7 @@ Required HTML structure:
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/* SMALL MOBILE  */
 
 @media screen and (max-width: 480px) {
   .page-content {

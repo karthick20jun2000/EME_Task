@@ -109,8 +109,6 @@
   }
 
   .sidebar {
-    /* width: 64px;
-    min-width: 64px; */
     overflow-x: hidden;
   }
   .menu-icon {
@@ -122,11 +120,6 @@
   .brand {
     justify-content: end;
     padding: auto;
-  }
-  .sidebar .menu-text,
-  .sidebar .brand-name,
-  .sidebar .submenu {
-    display: none;
   }
 }
 
