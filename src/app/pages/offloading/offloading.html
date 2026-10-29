@@ -1,0 +1,401 @@
+<div class="offloading-page container-fluid">
+
+    <!-- =====================================
+       BREADCRUMB
+  ====================================== -->
+    <nav aria-label="breadcrumb" class="page-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">Receiving</li>
+            <li class="breadcrumb-item">Grain Receiving</li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Offloading
+            </li>
+        </ol>
+    </nav>
+
+    <!-- =====================================
+       PAGE HEADING
+  ====================================== -->
+    <div class="page-heading">
+        <h1>Grain Receiving – Offloading (Second Weighing)</h1>
+    </div>
+
+    <!-- =====================================
+       RECEIVING INFORMATION
+  ====================================== -->
+    <div class="row g-3 receiving-info align-items-center">
+
+        <!-- Receiving Number -->
+        <div class="col-12 col-xl-4">
+            <div class="top-field">
+                <label for="receivingNo">Receiving No.</label>
+                <input id="receivingNo" type="text" class="form-control" value="GRN-2026-00045" readonly />
+            </div>
+        </div>
+
+        <!-- Date and Time -->
+        <div class="col-12 col-xl-4">
+            <div class="top-field">
+                <label for="receivingDate">Date &amp; Time</label>
+                <input id="receivingDate" type="datetime-local" class="form-control light-white-gray"
+                    value="2026-10-16T10:25" />
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div class="col-12 col-xl-4">
+            <div class="top-field">
+                <label>Status</label>
+                <span class="status-badge">Awaiting Offloading</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- =====================================
+       MAIN DETAILS PANELS
+       Desktop: Two columns
+       Mobile: Stacked columns
+  ====================================== -->
+    <div class="row g-3 main-panels">
+
+        <!-- =====================================
+         LEFT COLUMN: RECEIVING DETAILS
+    ====================================== -->
+        <div class="col-12 col-xl-5">
+
+            <section class="details-card">
+
+                <div class="card-heading">
+                    Receiving Details (Read Only)
+                </div>
+
+                <div class="card-content">
+
+                    <!-- Supplier -->
+                    <div class="detail-row">
+                        <label for="supplier">Supplier</label>
+
+                        <input id="supplier" type="text" class="form-control" value="Sunrise Farmers Co-op" readonly>
+                    </div>
+
+                    <!-- Crop Type -->
+                    <div class="detail-row">
+                        <label for="cropType">Crop Type</label>
+
+                        <input id="cropType" type="text" class="form-control" value="Maize" readonly>
+                    </div>
+
+                    <!-- Vehicle Registration -->
+                    <div class="detail-row">
+                        <label for="vehicleReg">Vehicle Reg. (Horse)</label>
+
+                        <input id="vehicleReg" type="text" class="form-control" value="ABZ 1234" readonly>
+                    </div>
+
+                    <!-- Trailer Registration -->
+                    <div class="detail-row">
+                        <label for="trailerReg">Trailer Reg. No.</label>
+
+                        <input id="trailerReg" type="text" class="form-control" value="ABZ 5678" readonly>
+                    </div>
+
+                    <!-- Transporter -->
+                    <div class="detail-row">
+                        <label for="transporter">Transporter</label>
+
+                        <input id="transporter" type="text" class="form-control" value="ABC Transport Ltd" readonly>
+                    </div>
+
+                    <!-- Driver Name -->
+                    <div class="detail-row">
+                        <label for="driverName">Driver Name</label>
+
+                        <input id="driverName" type="text" class="form-control" value="John Phiri" readonly>
+                    </div>
+
+                    <!-- Driver NRC -->
+                    <div class="detail-row">
+                        <label for="driverNrc">Driver NRC</label>
+
+                        <input id="driverNrc" type="text" class="form-control" value="123456/12/1" readonly>
+                    </div>
+
+                    <!-- Offloading Point -->
+                    <div class="detail-row">
+                        <label for="offloadingPoint">Offloading Point</label>
+
+                        <input id="offloadingPoint" type="text" class="form-control" value="Main Mill" readonly>
+                    </div>
+
+                    <!-- Destination Silo -->
+                    <div class="detail-row">
+                        <label for="destinationSilo">Destination Silo / Bin</label>
+
+                        <input id="destinationSilo" type="text" class="form-control" value="Silo 1 - Maize" readonly>
+                    </div>
+
+                    <!-- Area -->
+                    <div class="detail-row">
+                        <label for="area">Area</label>
+
+                        <input id="area" type="text" class="form-control" value="WH-53" readonly>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+        <!-- =====================================
+         RIGHT COLUMN: WEIGHT DETAILS
+    ====================================== -->
+        <div class="col-12 col-xl-7">
+
+            <section class="details-card">
+
+                <div class="card-heading">
+                    Weight Details (Second Weighing)
+                </div>
+
+                <div class="card-content">
+
+                    <!-- First Weight -->
+                    <div class="weight-row">
+
+                        <label for="firstWeightKg">
+                            First Weight (Gross)
+                        </label>
+
+                        <div class="input-group">
+                            <input id="firstWeightKg" type="text" class="form-control" value="15,620" readonly>
+
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="15.620"
+                                aria-label="First weight in metric tonnes" readonly>
+
+                            <span class="input-group-text">MT</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Second Weight -->
+                    <div class="weight-row">
+
+                        <label for="secondWeightKg">
+                            Second Weight (Tare)
+                            <span class="required">*</span>
+                        </label>
+
+                        <div class="input-group">
+                            <input id="secondWeightKg" type="text" class="form-control light-white-gray" value="4550">
+
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="4.550"
+                                aria-label="Second weight in metric tonnes" readonly>
+
+                            <span class="input-group-text">MT</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Net Weight -->
+                    <div class="weight-row net-weight">
+
+                        <label for="netWeightKg">
+                            Net Weight
+                        </label>
+
+                        <div class="input-group">
+                            <input id="netWeightKg" type="text" class="form-control" value="11,070" readonly>
+
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="11.070"
+                                aria-label="Net weight in metric tonnes" readonly>
+
+                            <span class="input-group-text">MT</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Deduction -->
+                    <div class="weight-row">
+
+                        <label for="deductionKg">
+                            Deduction (kg)
+                        </label>
+
+                        <div class="input-group">
+                            <input id="deductionKg" type="text" class="form-control light-white-gray" value="0">
+
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="0.000"
+                                aria-label="Deduction in metric tonnes" readonly>
+
+                            <span class="input-group-text">MT</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Real Net Weight -->
+                    <div class="weight-row">
+
+                        <label for="realNetWeightKg">
+                            Real Net Weight
+                        </label>
+
+                        <div class="input-group">
+                            <input id="realNetWeightKg" type="text" class="form-control" value="11,070" readonly>
+
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="11.070"
+                                aria-label="Real net weight in metric tonnes" readonly>
+
+                            <span class="input-group-text">MT</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Tare Time -->
+                    <div class="detail-row horizontal-row">
+
+                        <label for="tareTime">
+                            Tare Time
+                        </label>
+
+                        <input id="tareTime" type="datetime-local" class="form-control light-white-gray"
+                            value="2026-10-16T10:42">
+
+                    </div>
+
+                    <!-- Tare Operator -->
+                    <div class="detail-row horizontal-row">
+
+                        <label for="tareOperator">
+                            Tare Operator
+                        </label>
+
+                        <input id="tareOperator" type="text" class="form-control light-white-gray" value="OP2">
+
+                    </div>
+
+                    <!-- Completion Time -->
+                    <div class="detail-row horizontal-row">
+
+                        <label for="completionTime">
+                            Offloading Completed Time
+                        </label>
+
+                        <input id="completionTime" type="datetime-local" class="form-control light-white-gray"
+                            value="2026-10-16T10:45">
+
+                    </div>
+
+                    <!-- Remarks and Signature -->
+                    <div class="row g-2 remarks-signature w-50 no-wrap">
+
+                        <!-- Remarks -->
+                        <div class="col-12 col-md-6">
+
+                            <section class="sub-card">
+
+                                <div class="sub-heading">
+                                    Remarks
+                                </div>
+
+                                <textarea id="remarks" class="form-control remarks-input light-white-gray"
+                                    placeholder="Enter remarks...">Offloading completed</textarea>
+
+                            </section>
+
+                        </div>
+
+                        <!-- Driver Signature -->
+                        <div class="col-12 col-md-6">
+
+                            <section class="sub-card">
+
+                                <div class="sub-heading">
+                                    Driver's Signature
+                                </div>
+
+                                <div class="signature-box">
+
+                                    <span class="signature-placeholder">
+                                        Driver's signature
+                                    </span>
+
+                                    <button type="button" class="clear-btn">
+                                        Clear
+                                    </button>
+
+                                </div>
+
+                            </section>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- =====================================
+       INFORMATION BANNER
+  ====================================== -->
+    <div class="info-banner">
+
+        <div class="info-icon">i</div>
+
+        <div>
+            <p>
+                After completing offloading, status will be updated to
+                <strong>'Awaiting Purchase Pricing'</strong>.
+            </p>
+
+            <p>
+                Net weight will be used for purchase entry.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- =====================================
+       FOOTER ACTIONS
+  ====================================== -->
+    <div class="footer-actions">
+
+        <button type="button" class="btn btn-light action-btn">
+            Cancel
+        </button>
+
+        <button type="button" class="btn btn-secondary action-btn draft-btn">
+            Save as Draft
+        </button>
+
+        <button type="button" class="btn btn-success action-btn complete-btn">
+            Complete Offloading
+        </button>
+
+    </div>
+
+</div>

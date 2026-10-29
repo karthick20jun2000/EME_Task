@@ -1,0 +1,403 @@
+<div class="purchase-pricing-page container-fluid">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="page-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">Receiving</li>
+            <li class="breadcrumb-item">Grain Receiving</li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Purchase Pricing
+            </li>
+        </ol>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1 class="page-title">Grain Receiving - Purchase Pricing</h1>
+
+        <span class="status-badge">
+            Ready for Purchase Pricing
+        </span>
+    </div>
+
+    <!-- Receiving Number and Date -->
+    <div class="row g-2 purchase-top-info">
+
+        <div class="col-6 col-md-6">
+            <div class="top-field receiving-number-field">
+                <label for="receivingNo">Receiving No.</label>
+
+                <input id="receivingNo" type="text" class="form-control readonly-control" value="GRN-2026-000045"
+                    readonly />
+
+                <span class="auto-badge">Auto</span>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="top-field date-field">
+                <label for="purchaseDate">Date &amp; Time</label>
+
+                <input id="purchaseDate" type="datetime-local" class="form-control" value="2026-10-16T10:25" />
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Main Three Column Layout -->
+    <div class="row g-2 purchase-main-layout">
+
+        <!-- LEFT COLUMN: RECEIVING INFORMATION -->
+        <div class="col-12 col-lg-4">
+
+            <section class="pricing-card receiving-card">
+
+                <div class="card-heading">
+                    Receiving Information (Read Only)
+                </div>
+
+                <div class="card-content">
+
+                    <div class="detail-row">
+                        <label for="supplier">Supplier</label>
+                        <input id="supplier" class="form-control readonly-control" value="Sunrise Farmers Co-op"
+                            readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="cropType">Crop Type</label>
+                        <input id="cropType" class="form-control readonly-control" value="Maize" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="horseReg">Vehicle Reg. (Horse)</label>
+                        <input id="horseReg" class="form-control readonly-control" value="ABZ 1234" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="trailerReg">Trailer Reg. No.</label>
+                        <input id="trailerReg" class="form-control readonly-control" value="ABZ 5678" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="transporter">Transporter</label>
+                        <input id="transporter" class="form-control readonly-control" value="ABC Transport Ltd"
+                            readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="driverName">Driver Name</label>
+                        <input id="driverName" class="form-control readonly-control" value="John Phiri" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="driverNrc">Driver NRC</label>
+                        <input id="driverNrc" class="form-control readonly-control" value="123456/12/1" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="offloadingPoint">Offloading Point</label>
+                        <input id="offloadingPoint" class="form-control readonly-control" value="Main Mill" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="destination">Destination Silo / Bin</label>
+                        <input id="destination" class="form-control readonly-control" value="Silo 1 - Maize" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="deliveryNote">Delivery Note No.</label>
+                        <input id="deliveryNote" class="form-control readonly-control" value="M-2377" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="grvNo">GRV No. (if available)</label>
+                        <input id="grvNo" class="form-control readonly-control" value="11060" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="area">Area</label>
+                        <input id="area" class="form-control readonly-control" value="WH-53" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="material">Material / Variety</label>
+                        <input id="material" class="form-control readonly-control" value="Maize - Grade A" readonly />
+                    </div>
+
+                    <div class="detail-row">
+                        <label for="quantityPackaging">Quantity / Packaging</label>
+                        <input id="quantityPackaging" class="form-control readonly-control" value="Bags" readonly />
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+        <!-- CENTER COLUMN: WEIGHT AND PURCHASE DETAILS -->
+        <div class="col-12 col-lg-4">
+
+            <!-- Weight Details -->
+            <section class="pricing-card weight-card">
+
+                <div class="card-heading">
+                    Weight Details (Read Only)
+                </div>
+
+                <div class="card-content">
+
+                    <div class="weight-row">
+                        <label>First Weight (Gross)</label>
+
+                        <div class="input-group">
+                            <input class="form-control readonly-control" value="15,620" readonly />
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="form-control readonly-control" value="15.620" readonly />
+                            <span class="input-group-text">MT</span>
+                        </div>
+                    </div>
+
+                    <div class="weight-row">
+                        <label>Second Weight (Tare)</label>
+
+                        <div class="input-group">
+                            <input class="form-control readonly-control" value="4,550" readonly />
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="form-control readonly-control" value="4.550" readonly />
+                            <span class="input-group-text">MT</span>
+                        </div>
+                    </div>
+
+                    <div class="weight-row net-weight-row">
+                        <label>Net Weight</label>
+
+                        <div class="input-group">
+                            <input class="form-control" value="11,070" readonly />
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="form-control" value="11.070" readonly />
+                            <span class="input-group-text">MT</span>
+                        </div>
+                    </div>
+
+                    <div class="weight-row">
+                        <label>Deduction (kg)</label>
+
+                        <div class="input-group">
+                            <input class="form-control" value="0" readonly />
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="form-control readonly-control" value="0.000" readonly />
+                            <span class="input-group-text">MT</span>
+                        </div>
+                    </div>
+
+                    <div class="weight-row">
+                        <label>Real Net Weight</label>
+
+                        <div class="input-group">
+                            <input class="form-control readonly-control" value="11,070" readonly />
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="form-control readonly-control" value="11.070" readonly />
+                            <span class="input-group-text">MT</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Purchase Details -->
+            <section class="pricing-card purchase-details-card">
+
+                <div class="card-heading">
+                    Purchase Details
+                </div>
+
+                <div class="card-content">
+
+                    <!-- Purchase Rate -->
+                    <div class="purchase-row">
+                        <label for="purchaseRate">
+                            Purchase Rate per MT <span class="required">*</span>
+                        </label>
+
+                        <div class="input-group">
+                            <input id="purchaseRate" type="number" class="form-control" value="250.00" min="0"
+                                step="0.01" />
+
+                            <span class="input-group-text">USD</span>
+
+                            <select class="form-select currency-select" aria-label="Purchase currency">
+                                <option selected>USD</option>
+                                <option>ZMW</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Net Quantity -->
+                    <div class="purchase-row">
+                        <label for="netQuantity">Net Quantity (MT)</label>
+
+                        <div class="input-group">
+                            <input id="netQuantity" class="form-control readonly-control" value="11.070" readonly />
+
+                            <span class="input-group-text">MT</span>
+                        </div>
+                    </div>
+
+                    <!-- Subtotal -->
+                    <div class="purchase-row">
+                        <label for="subtotal">Total Amount (USD)</label>
+
+                        <input id="subtotal" class="form-control readonly-control" value="2,767.50" readonly />
+                    </div>
+
+                    <!-- VAT Applicable -->
+                    <div class="vat-row">
+
+                        <label for="vatApplicable">VAT Applicable</label>
+
+                        <div class="vat-check">
+                            <input id="vatApplicable" class="form-check-input" type="checkbox" checked />
+                            <label for="vatApplicable">Yes</label>
+                        </div>
+
+                        <label for="vatRate" class="vat-rate-label">VAT Rate</label>
+
+                        <select id="vatRate" class="form-select vat-rate-select">
+                            <option>0%</option>
+                            <option>10%</option>
+                            <option selected>16%</option>
+                            <option>18%</option>
+                        </select>
+
+                    </div>
+
+                    <!-- VAT Amount -->
+                    <div class="purchase-row">
+                        <label for="vatAmount">VAT Amount (USD)</label>
+
+                        <input id="vatAmount" class="form-control readonly-control" value="442.80" readonly />
+                    </div>
+
+                    <!-- Final Total -->
+                    <div class="purchase-row final-total-row">
+                        <label for="finalTotal">Total Amount (USD)</label>
+
+                        <input id="finalTotal" class="form-control" value="3,210.30" readonly />
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN: ADDITIONAL DETAILS -->
+        <div class="col-12 col-lg-4">
+
+            <section class="pricing-card additional-card">
+
+                <div class="card-heading">
+                    Additional Details
+                </div>
+
+                <div class="card-content">
+
+                    <!-- Payment Terms -->
+                    <div class="additional-row">
+                        <label for="paymentTerms">Payment Terms</label>
+
+                        <select id="paymentTerms" class="form-select">
+                            <option selected>30 Days</option>
+                            <option>Cash</option>
+                            <option>7 Days</option>
+                            <option>14 Days</option>
+                            <option>60 Days</option>
+                        </select>
+                    </div>
+
+                    <!-- Contract Number -->
+                    <div class="additional-row">
+                        <label for="contractNumber">Contract / Reference No.</label>
+
+                        <input id="contractNumber" type="text" class="form-control" value="PO-2026-0125" />
+                    </div>
+
+                    <!-- Other Deductions -->
+                    <div class="additional-row">
+                        <label for="otherDeductions">Other Deductions (if any)</label>
+
+                        <div class="input-group">
+                            <input id="otherDeductions" type="number" class="form-control" value="0.00" min="0"
+                                step="0.01" />
+
+                            <span class="input-group-text">USD</span>
+                        </div>
+                    </div>
+
+                    <!-- Remarks -->
+                    <div class="remarks-field">
+                        <label for="purchaseRemarks">Remarks</label>
+
+                        <textarea id="purchaseRemarks" class="form-control remarks-input"
+                            rows="4">As per agreed rate.</textarea>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Information Panel -->
+            <section class="confirmation-info">
+
+                <div class="confirmation-icon">i</div>
+
+                <div class="confirmation-content">
+
+                    <h3>After confirmation, system will:</h3>
+
+                    <ul>
+                        <li>Create purchase entry with net quantity and entered rate</li>
+                        <li>Update stock in selected silo/bin</li>
+                        <li>Credit supplier account</li>
+                        <li>Post accounting entries automatically</li>
+                    </ul>
+
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Footer Actions -->
+    <div class="footer-actions">
+
+        <button type="button" class="btn cancel-btn">
+            Cancel
+        </button>
+
+        <button type="button" class="btn draft-btn">
+            Save as Draft
+        </button>
+
+        <button type="button" class="btn post-btn">
+            Create Purchase Entry &amp; Post
+        </button>
+
+    </div>
+
+</div>

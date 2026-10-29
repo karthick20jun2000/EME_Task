@@ -1,0 +1,131 @@
+<div class="truck-in-page">
+    <div class="record-bar">
+        <label>Receiving No.</label>
+        <div class="receiving-number">
+            <input value="GRN-2026-00045" readonly />
+            <span class="receiving-number-auto">Auto</span>
+        </div>
+
+        <label>Date &amp; Time</label>
+        <input type="datetime-local" value="2026-10-16T10:25" />
+    </div>
+
+    <div class="form-grid">
+        <section class="panel">
+            <h2>Vehicle &amp; Driver Details</h2>
+
+            <label>Vehicle Reg. (Horse) <b>*</b></label>
+            <input value="ABZ 1234" />
+
+            <label>Trailer Reg. No. <b>*</b></label>
+            <input value="ABZ 5678" />
+
+            <label>Transporter <b>*</b></label>
+            <div class="input-icon">
+                <input class="company-input" value="ABC Transport Ltd" />
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+
+            <label>Driver Name <b>*</b></label>
+            <input value="John Phiri" />
+
+            <label>Driver NRC <b>*</b></label>
+            <input value="123456/12/1" />
+        </section>
+
+        <section class="panel">
+            <h2>Weighbridge Details (First Weighing)</h2>
+
+            <label>Weighbridge Serial No. <b>*</b></label>
+            <input value="11040" />
+
+            <label>Gross Weight (kg) <b>*</b></label>
+            <div class="input-unit d-flex align-items-center">
+                <input value="15620" class="position-relative" />
+                <span class="position-absolute right-40">kg</span>
+            </div>
+
+            <label>Gross Weight (MT)</label>
+            <div class="input-unit disabled d-flex align-items-center">
+                <input value="15.620" readonly class="position-relative" />
+                <span class="position-absolute right-40">MT</span>
+            </div>
+
+            <label>Gross Time</label>
+            <input type="datetime-local" value="2026-10-16T09:58" />
+
+            <label>Gross Operator</label>
+            <input value="OP1" />
+        </section>
+
+        <section class="panel">
+            <h2>Commodity &amp; Location</h2>
+
+            <label>Supplier <b>*</b></label>
+            <div class="input-icon">
+                <input class="company-input" value="Sunrise Farmers Co-op" />
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+
+            <label>Crop Type <b>*</b></label>
+            <select>
+                <option>Maize</option>
+                <option>Wheat</option>
+                <option>Soybeans</option>
+            </select>
+
+            <label>Material / Variety</label>
+            <select>
+                <option>Maize - Grade A</option>
+                <option>Maize - Grade B</option>
+            </select>
+
+            <label>Quantity / Packaging</label>
+            <select>
+                <option>Bags</option>
+                <option>Bulk</option>
+            </select>
+
+            <label>Offloading Point <b>*</b></label>
+            <select>
+                <option>Main Mill</option>
+                <option>Warehouse</option>
+            </select>
+
+            <label>Destination Silo / Bin <b>*</b></label>
+            <select>
+                <option>Silo 1 - Maize</option>
+                <option>Silo 2 - Maize</option>
+            </select>
+
+            <label>Area</label>
+            <input value="WH-53" />
+        </section>
+
+        <section class="panel reference-panel">
+            <h2>Reference Information</h2>
+
+            <label>Delivery Note No.</label>
+            <input value="M-2377" />
+
+            <label>Customer / Farmer</label>
+            <div class="input-icon">
+                <input value="Sunrise Farmers Co-op" class="company-input" />
+                <span> <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </span>
+            </div>
+
+            <label>GRV No. (if available)</label>
+            <input value="11060" />
+
+            <label>Remarks</label>
+            <textarea rows="4">From Chisamba Farm</textarea>
+        </section>
+    </div>
+
+    <footer class="form-actions">
+        <button type="button" class="btn btn-secondary">Cancel</button>
+        <button type="button" class="btn btn-secondary">Save as Draft</button>
+        <button type="button" class="btn btn-primary">Register Truck In</button>
+    </footer>
+</div>

@@ -1,0 +1,610 @@
+.erp-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.page-content {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 16px 20px;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.page-heading h1 {
+  margin: 0;
+  font-size: clamp(21px, 2vw, 29px);
+  line-height: 1.35;
+  color: #142b4e;
+}
+
+.info-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 440px;
+  padding: 12px;
+  border: 1px solid #f2d7a2;
+  border-radius: 5px;
+  background: #fff5df;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.info-banner p {
+  margin: 0 0 3px;
+}
+
+.info-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #f59a16;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 1100px) {
+  .page-heading {
+    flex-direction: column;
+  }
+
+  .info-banner {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-content {
+    padding: 12px;
+  }
+}
+
+.erp-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-area {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+}
+
+.page-content {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+}
+
+@media screen and (max-width: 700px) {
+  .page-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page-heading h1 {
+    font-size: 21px;
+    overflow-wrap: anywhere;
+  }
+
+  .info-banner {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.erp-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-area {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+}
+
+.page-content {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+}
+
+@media screen and (max-width: 700px) {
+  .page-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page-heading h1 {
+    font-size: 17px;
+    overflow-wrap: anywhere;
+  }
+
+  .info-banner {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Desktop layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Hidden on desktop */
+.mobile-menu-btn {
+  display: none;
+}
+.company-selector {
+  display: none;
+}
+.sidebar-overlay {
+  display: none;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .app-layout {
+    display: block;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #1e3a5f;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+  }
+  .company-selector {
+    display: block;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    background: #f7f9fc;
+    border: 1px solid #dce5ef;
+    border-radius: 4px;
+    color: #25344b;
+  }
+  .main-content {
+    width: 100%;
+  }
+
+  /* Sidebar hidden by default */
+  app-sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    z-index: 1001;
+    background: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    box-shadow: none;
+  }
+
+  /* Show sidebar when button is clicked */
+  app-sidebar.mobile-open {
+    transform: translateX(0);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Dark background behind open sidebar */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+  }
+}
+
+/* offloading */
+
+/* =========================================
+   APPLICATION LAYOUT
+========================================= */
+
+.erp-layout,
+.app-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-area,
+.main-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+}
+
+/* =========================================
+   PAGE CONTENT
+========================================= */
+
+.page-content {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 16px 20px;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.page-heading h1 {
+  margin: 0;
+  font-size: clamp(21px, 2vw, 29px);
+  line-height: 1.35;
+  color: #142b4e;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   INFORMATION BANNER
+========================================= */
+
+.info-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  max-width: 440px;
+  padding: 12px;
+  border: 1px solid #f2d7a2;
+  border-radius: 5px;
+  background: #fff5df;
+  font-size: 12px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.info-banner p {
+  margin: 0 0 3px;
+}
+
+.info-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #f59a16;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* =========================================
+   MOBILE HEADER CONTROLS
+========================================= */
+
+/* Hidden on desktop */
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.company-selector {
+  display: none;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* =========================================
+   DESKTOP FORM LAYOUT
+========================================= */
+
+/*
+Required HTML structure:
+
+<div class="row g-3 main-panels">
+  <div class="col-12 col-xl-5">
+    Receiving Details
+  </div>
+
+  <div class="col-12 col-xl-7">
+    Weight Details
+  </div>
+</div>
+*/
+
+.main-panels {
+  align-items: stretch;
+  min-width: 0;
+}
+
+.main-panels > div {
+  min-width: 0;
+}
+
+.details-card {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #d9eaf8;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.card-heading {
+  padding: 10px 14px;
+  background: #e4f3ff;
+  color: #12418c;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.card-content {
+  padding: 12px;
+  min-width: 0;
+}
+
+/* =========================================
+   DESKTOP BREAKPOINT
+========================================= */
+
+@media screen and (min-width: 1200px) {
+  .erp-layout,
+  .app-layout {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-area,
+  .main-content {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+  }
+
+  .page-content {
+    width: 100%;
+    max-width: none;
+    padding: 16px 20px;
+  }
+
+  .page-heading {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .info-banner {
+    max-width: 440px;
+  }
+
+  /*
+  Bootstrap grid:
+  Receiving Details = 5 columns
+  Weight Details = 7 columns
+  */
+
+  .main-panels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .main-panels > .col-xl-5 {
+    flex: 0 0 41.666667%;
+    width: 41.666667%;
+    max-width: 41.666667%;
+  }
+
+  .main-panels > .col-xl-7 {
+    flex: 0 0 58.333333%;
+    width: 58.333333%;
+    max-width: 58.333333%;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 1199.98px) {
+  .page-heading {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .info-banner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-panels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main-panels > .col-xl-5,
+  .main-panels > .col-xl-7 {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 700px) {
+  .erp-layout,
+  .app-layout {
+    display: block;
+    width: 100%;
+  }
+
+  .main-area,
+  .main-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .page-content {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .page-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .page-heading h1 {
+    font-size: 21px;
+    overflow-wrap: anywhere;
+  }
+
+  .info-banner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Mobile menu button */
+
+  .mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    background: #1e3a5f;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+  }
+
+  /* Mobile company selector */
+
+  .company-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    background: #f7f9fc;
+    border: 1px solid #dce5ef;
+    border-radius: 4px;
+    color: #25344b;
+  }
+
+  /* Sidebar closed by default */
+
+  app-sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    max-width: 85vw;
+    height: 100vh;
+    z-index: 1001;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: none;
+  }
+
+  /* Sidebar opened */
+
+  app-sidebar.mobile-open {
+    transform: translateX(0);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Overlay */
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+  .page-content {
+    padding: 10px;
+  }
+
+  .page-heading h1 {
+    font-size: 19px;
+  }
+
+  .card-heading {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,60 @@
+<div class="erp-layout">
+
+  <!-- Sidebar -->
+  <app-sidebar [class.mobile-open]="isSidebarOpen">
+  </app-sidebar>
+
+  <main class="main-area">
+
+    <!-- Mobile menu button -->
+    <div class="d-flex justify-content-between">
+      <button class="mobile-menu-btn" (click)="toggleSidebar()" aria-label="Toggle sidebar">
+        ☰
+      </button>
+      <button class="company-selector">
+        <span>▣</span>
+        <span>Crown Millers Ltd</span>
+        <span>⌄</span>
+      </button>
+    </div>
+    <!-- Header -->
+    <app-header></app-header>
+
+    <!-- <section class="page-content">
+      <div class="breadcrumb">
+        <span>Receiving</span>
+        <span class="separator">›</span>
+        <span>Grain Receiving</span>
+        <span class="separator">›</span>
+        <span>Truck In</span>
+      </div>
+
+      <div class="page-heading">
+        <h1>Grain Receiving – Truck In (First Weighing)</h1>
+
+        <div class="info-banner">
+          <span class="info-icon">i</span>
+          <div>
+            <p>
+              Used at Gate / Entry Point. Capture only vehicle and first
+              (gross) weight details.
+            </p>
+            <strong>
+              No purchase price is entered at this stage.
+            </strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-content">
+        <h2>Truck In</h2>
+        <app-truck-in></app-truck-in>
+
+      </div>
+    </section>
+
+  </main> -->
+    <!-- <app-offloading></app-offloading> -->
+    <app-purchase-pricing></app-purchase-pricing>
+
+    <!-- </div> -->
