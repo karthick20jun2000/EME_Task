@@ -338,6 +338,15 @@ textarea {
   gap: 10px;
 }
 
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.form-control.is-invalid::placeholder {
+  color: #dc3545;
+  opacity: 1;
+}
+
 .btn {
   min-height: 42px;
   padding: 11px 24px;

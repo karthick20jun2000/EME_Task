@@ -535,3 +535,17 @@
     font-size: 12px;
   }
 }
+.form-control.is-invalid {
+  border: 1px solid #dc3545;
+  box-shadow: none;
+}
+
+.form-control.is-invalid::placeholder {
+  color: #dc3545;
+  opacity: 1;
+  font-size: 12px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}

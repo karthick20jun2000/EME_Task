@@ -1,156 +1,189 @@
 <div class="truck-in-page">
-    <nav aria-label="breadcrumb" class="page-breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">Receiving > </li>
-            <li class="breadcrumb-item">Grain Receiving > </li>
-            <li class="breadcrumb-item active" aria-current="page">
-                Truck In
-            </li>
-        </ol>
-    </nav>
+    <form [formGroup]="truckINForm" (ngSubmit)="regestration()">
+        <nav aria-label="breadcrumb" class="page-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Receiving > </li>
+                <li class="breadcrumb-item">Grain Receiving > </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    Truck In
+                </li>
+            </ol>
+        </nav>
 
-    <section>
-        <div class="page-heading">
-            <h1>Grain Receiving – Truck In (First Weighing)</h1>
+        <section>
+            <div class="page-heading">
+                <h1>Grain Receiving – Truck In (First Weighing)</h1>
 
-            <div class="info-banner">
-                <span class="info-icon">i</span>
-                <div>
-                    <p>Used at Gate / Entry Point. Capture only vehicle and first (gross) weight details.</p>
-                    <strong>No purchase price is entered at this stage.</strong>
+                <div class="info-banner">
+                    <span class="info-icon">i</span>
+                    <div>
+                        <p>Used at Gate / Entry Point. Capture only vehicle and first (gross) weight details.</p>
+                        <strong>No purchase price is entered at this stage.</strong>
+                    </div>
                 </div>
             </div>
+
+
+        </section>
+        <div class="record-bar">
+            <label>Receiving No.</label>
+            <div class="receiving-number">
+                <input value="GRN-2026-00045" readonly />
+                <span class="receiving-number-auto">Auto</span>
+            </div>
+
+            <label>Date &amp; Time</label>
+            <input type="datetime-local" value="2026-10-16T10:25" />
         </div>
 
+        <div class="form-grid">
+            <section class="panel">
+                <h2>Vehicle &amp; Driver Details</h2>
 
-    </section>
-    <div class="record-bar">
-        <label>Receiving No.</label>
-        <div class="receiving-number">
-            <input value="GRN-2026-00045" readonly />
-            <span class="receiving-number-auto">Auto</span>
+                <label>Vehicle Reg. (Horse) <b>*</b></label>
+                <input formControlName="vichilereg" class="form-control"
+                    [class.is-invalid]="truckINForm.get('vichilereg')?.touched && truckINForm.get('vichilereg')?.invalid"
+                    [placeholder]="truckINForm.get('vichilereg')?.touched && truckINForm.get('vichilereg')?.hasError('required') ? 'Vehicle Reg. Number Required' : 'ABZ 1234'" />
+                <label>Trailer Reg. No. <b>*</b></label>
+                <input formControlName="trailerreg" class="form-control"
+                    [class.is-invalid]="truckINForm.get('trailerreg')?.touched && truckINForm.get('trailerreg')?.invalid"
+                    [placeholder]="truckINForm.get('trailerreg')?.touched && truckINForm.get('trailerreg')?.hasError('required') ? 'Trailer Reg. Number Required' : 'ABZ 5678'" />
+                <label>Transporter <b>*</b></label>
+                <div class="input-icon">
+                    <input class="company-input form-control" value="ABC Transport Ltd" formControlName="transport"
+                        [class.is-invalid]="truckINForm.get('transport')?.touched && truckINForm.get('transport')?.invalid"
+                        [placeholder]="truckINForm.get('transport')?.touched && truckINForm.get('transport')?.hasError('required') ? 'Trailer Reg. Number Required' : 'ABC Transport Ltd'" />
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+
+                <label>Driver Name <b>*</b></label>
+                <input value="John Phiri" formControlName="drivername" class="form-control"
+                    [class.is-invalid]="truckINForm.get('drivername')?.touched && truckINForm.get('drivername')?.invalid"
+                    [placeholder]="truckINForm.get('drivername')?.touched && truckINForm.get('drivername')?.hasError('required') ? 'Driver Name ' : 'John Phiri'" />
+                <label>Driver NRC <b>*</b></label>
+                <input value="123456/12/1" formControlName="drivernrc" class="form-control"
+                    [class.is-invalid]="truckINForm.get('drivernrc')?.touched && truckINForm.get('drivernrc')?.invalid"
+                    [placeholder]="truckINForm.get('drivernrc')?.touched && truckINForm.get('drivernrc')?.hasError('required') ? 'Driver NRC  Required' : '123456/12/1'" />
+            </section>
+
+            <section class="panel">
+                <h2>Weighbridge Details (First Weighing)</h2>
+
+                <label>Weighbridge Serial No. <b>*</b></label>
+                <input value="11040" formControlName="weighbridgeserialno" class="form-control"
+                    [class.is-invalid]="truckINForm.get('weighbridgeserialno')?.touched && truckINForm.get('weighbridgeserialno')?.invalid"
+                    [placeholder]="truckINForm.get('weighbridgeserialno')?.touched && truckINForm.get('weighbridgeserialno')?.hasError('required') ? 'Weighbridge Serial Number Number Required' : '11040'" />
+                <label>Gross Weight (kg) <b>*</b></label>
+                <div class="input-unit d-flex align-items-center">
+                    <input value="15620" class="position-relative" formControlName="grossweightkg" class="form-control"
+                        [class.is-invalid]="truckINForm.get('grossweightkg')?.touched && truckINForm.get('grossweightkg')?.invalid"
+                        [placeholder]="truckINForm.get('grossweightkg')?.touched && truckINForm.get('grossweightkg')?.hasError('required') ? 'Gross Weight Required' : '15620'" />
+                    />
+                    <span class="position-absolute right-40">kg</span>
+
+                </div>
+
+                <label>Gross Weight (MT)</label>
+                <div class="input-unit disabled d-flex align-items-center">
+                    <input value="15.620" readonly class="position-relative form-control"
+                        formControlName="grossweightmt" />
+                    <span class="position-absolute right-40">MT</span>
+                </div>
+
+                <label>Gross Time</label>
+                <input type="datetime-local" value="2026-10-16T09:58" formControlName="grosstime" />
+
+                <label>Gross Operator</label>
+                <input value="OP1" formControlName="grossoperator" />
+            </section>
+
+            <section class="panel">
+                <h2>Commodity &amp; Location</h2>
+
+                <label>Supplier <b>*</b></label>
+                <div class="input-icon">
+                    <input class="company-input" value="Sunrise Farmers Co-op" formControlName="supplier"
+                        class="form-control"
+                        [class.is-invalid]="truckINForm.get('supplier')?.touched && truckINForm.get('supplier')?.invalid"
+                        [placeholder]="truckINForm.get('supplier')?.touched && truckINForm.get('supplier')?.hasError('required') ? 'Supplier Required' : 'supplier'" />
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+
+                </div>
+
+                <label>Crop Type <b>*</b></label>
+                <select formControlName="croptype" class="form-control"
+                    [class.is-invalid]="truckINForm.get('croptype')?.touched && truckINForm.get('croptype')?.invalid">
+                    <option>Maize</option>
+                    <option>Wheat</option>
+                    <option>Soybeans</option>
+                </select>
+                <div class="text-danger small mt-1 error-message"
+                    *ngIf="truckINForm.get('croptype')?.touched && truckINForm.get('croptype')?.hasError('required')">
+                    Vehicle Reg Required
+                </div>
+                <label>Material / Variety</label>
+                <select formControlName="materialvariety" class="form-control">
+                    <option>Maize - Grade A</option>
+                    <option>Maize - Grade B</option>
+                </select>
+
+                <label>Quantity / Packaging</label>
+                <select formControlName="quantitypackaging" class="form-control">
+                    <option>Bags</option>
+                    <option>Bulk</option>
+                </select>
+
+                <label>Offloading Point <b>*</b></label>
+                <select formControlName="offloadingpoint" class="form-control"
+                    [class.is-invalid]="truckINForm.get('offloadingpoint')?.touched && truckINForm.get('offloadingpoint')?.invalid">
+                    <option>Main Mill</option>
+                    <option>Warehouse</option>
+                </select>
+                <div class="text-danger small mt-1 error-message"
+                    *ngIf="truckINForm.get('offloadingpoint')?.touched && truckINForm.get('offloadingpoint')?.hasError('required')">
+                    Vehicle Reg Required
+                </div>
+                <label>Destination Silo / Bin <b>*</b></label>
+                <select formControlName="destinationsilobin" class="form-control"
+                    [class.is-invalid]="truckINForm.get('destinationsilobin')?.touched && truckINForm.get('destinationsilobin')?.invalid">
+                    <option>Silo 1 - Maize</option>
+                    <option>Silo 2 - Maize</option>
+                </select>
+                <div class="text-danger small mt-1 error-message"
+                    *ngIf="truckINForm.get('vichilereg')?.touched && truckINForm.get('vichilereg')?.hasError('required')">
+                    Vehicle Reg Required
+                </div>
+                <label>Area</label>
+                <input value="WH-53" formControlName="area" class="form-control" />
+            </section>
+
+            <section class="panel reference-panel">
+                <h2>Reference Information</h2>
+
+                <label>Delivery Note No.</label>
+                <input value="M-2377" formControlName="deliverynoteno" class="form-control" />
+
+                <label>Customer / Farmer</label>
+                <div class="input-icon">
+                    <input value="Sunrise Farmers Co-op" class="company-input form-control"
+                        formControlName="customerfarmer" />
+                    <span> <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </span>
+                </div>
+
+                <label>GRV No. (if available)</label>
+                <input value="11060" formControlName="grvno" class="form-control" />
+
+                <label>Remarks</label>
+                <textarea rows="4" formControlName="remarks" class="form-control" placeholder="Enter remarks">
+</textarea>
+            </section>
         </div>
 
-        <label>Date &amp; Time</label>
-        <input type="datetime-local" value="2026-10-16T10:25" />
-    </div>
-
-    <div class="form-grid">
-        <section class="panel">
-            <h2>Vehicle &amp; Driver Details</h2>
-
-            <label>Vehicle Reg. (Horse) <b>*</b></label>
-            <input value="ABZ 1234" />
-
-            <label>Trailer Reg. No. <b>*</b></label>
-            <input value="ABZ 5678" />
-
-            <label>Transporter <b>*</b></label>
-            <div class="input-icon">
-                <input class="company-input" value="ABC Transport Ltd" />
-                <span><i class="fa-solid fa-magnifying-glass"></i></span>
-            </div>
-
-            <label>Driver Name <b>*</b></label>
-            <input value="John Phiri" />
-
-            <label>Driver NRC <b>*</b></label>
-            <input value="123456/12/1" />
-        </section>
-
-        <section class="panel">
-            <h2>Weighbridge Details (First Weighing)</h2>
-
-            <label>Weighbridge Serial No. <b>*</b></label>
-            <input value="11040" />
-
-            <label>Gross Weight (kg) <b>*</b></label>
-            <div class="input-unit d-flex align-items-center">
-                <input value="15620" class="position-relative" />
-                <span class="position-absolute right-40">kg</span>
-            </div>
-
-            <label>Gross Weight (MT)</label>
-            <div class="input-unit disabled d-flex align-items-center">
-                <input value="15.620" readonly class="position-relative" />
-                <span class="position-absolute right-40">MT</span>
-            </div>
-
-            <label>Gross Time</label>
-            <input type="datetime-local" value="2026-10-16T09:58" />
-
-            <label>Gross Operator</label>
-            <input value="OP1" />
-        </section>
-
-        <section class="panel">
-            <h2>Commodity &amp; Location</h2>
-
-            <label>Supplier <b>*</b></label>
-            <div class="input-icon">
-                <input class="company-input" value="Sunrise Farmers Co-op" />
-                <span><i class="fa-solid fa-magnifying-glass"></i></span>
-            </div>
-
-            <label>Crop Type <b>*</b></label>
-            <select>
-                <option>Maize</option>
-                <option>Wheat</option>
-                <option>Soybeans</option>
-            </select>
-
-            <label>Material / Variety</label>
-            <select>
-                <option>Maize - Grade A</option>
-                <option>Maize - Grade B</option>
-            </select>
-
-            <label>Quantity / Packaging</label>
-            <select>
-                <option>Bags</option>
-                <option>Bulk</option>
-            </select>
-
-            <label>Offloading Point <b>*</b></label>
-            <select>
-                <option>Main Mill</option>
-                <option>Warehouse</option>
-            </select>
-
-            <label>Destination Silo / Bin <b>*</b></label>
-            <select>
-                <option>Silo 1 - Maize</option>
-                <option>Silo 2 - Maize</option>
-            </select>
-
-            <label>Area</label>
-            <input value="WH-53" />
-        </section>
-
-        <section class="panel reference-panel">
-            <h2>Reference Information</h2>
-
-            <label>Delivery Note No.</label>
-            <input value="M-2377" />
-
-            <label>Customer / Farmer</label>
-            <div class="input-icon">
-                <input value="Sunrise Farmers Co-op" class="company-input" />
-                <span> <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                </span>
-            </div>
-
-            <label>GRV No. (if available)</label>
-            <input value="11060" />
-
-            <label>Remarks</label>
-            <textarea rows="4">From Chisamba Farm</textarea>
-        </section>
-    </div>
-
-    <footer class="form-actions">
-        <button type="button" class="btn btn-secondary">Cancel</button>
-        <button type="button" class="btn btn-secondary">Save as Draft</button>
-        <button type="button" class="btn btn-primary">Register Truck In</button>
-    </footer>
+        <footer class="form-actions">
+            <button type="button" class="btn btn-secondary">Cancel</button>
+            <button type="button" class="btn btn-secondary">Save as Draft</button>
+            <button type="submit" class="btn btn-primary">Register Truck In</button>
+        </footer>
+    </form>
 </div>
